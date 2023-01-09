@@ -12,7 +12,6 @@ function kui_list_filter(p_listbox) {
 	input = document.getElementById(p_listbox);
 	filter = input.value.toUpperCase();
 	a = document.getElementById(p_listbox+"kui_list").getElementsByTagName("a");
-//	a = div;
 	var hidden = 0;
 	for (i = 0; i < a.length; i++) {
 		txtValue = a[i].textContent || a[i].innerText;
