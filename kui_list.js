@@ -7,7 +7,11 @@ function kui_list_onClick(p_listbox, p_input) {
 	document.getElementById(p_listbox).value = p_input;
 	document.getElementById(p_listbox+"kui_list").style.display = "none";
 }
-function kui_list_filter(p_listbox) {
+function kui_list_filter(e, p_listbox) {
+	if (e.code == "Escape") {
+		document.getElementById(p_listbox+"kui_list").style.display = "none";
+		return;
+	}
 	var input, filter, a, i;
 	input = document.getElementById(p_listbox);
 	filter = input.value.toUpperCase();
