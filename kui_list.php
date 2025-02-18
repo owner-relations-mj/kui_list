@@ -31,7 +31,7 @@ if (!defined('KUI_LIST')) {
 				$l_class = $this->CSS . " " . $this->ID;
 			}
 			echo "<div class=\"kui_list".$this->CSS."\">
-	<input onclick=\"kui_list_show('".$this->ID."')\" name=\"".$this->ID."\" id=\"".$this->ID."\" class=\"".$l_class."\" value=\"".$this->Value."\" onkeyup=\"kui_list_filter(event,'".$this->ID."')\">
+	<input onclick=\"kui_list_show('".$this->ID."')\" name=\"".$this->ID."\" id=\"".$this->ID."\" class=\"".$l_class."\" value=\"".$this->Value."\" onkeyup=\"kui_list_filter(event,'".$this->ID."')\" onfocusout=\"document.getElementById('".$this->ID."kui_list').style.display = 'none'\">
 	<div id=\"".$this->ID."kui_list\" class=\"kui_list-content\">";
 			foreach($this->List as $value) {
 				echo "    <a href=\"javascript:kui_list_onClick('$this->ID','$value');\">$value</a>\n";
